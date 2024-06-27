@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PowerTechFusion/static/css/main.66bd0fe1.css",
+    "main.css": "/PowerTechFusion/static/css/main.5393797f.css",
     "main.js": "/PowerTechFusion/static/js/main.4b12af2a.js",
     "static/js/453.b587544c.chunk.js": "/PowerTechFusion/static/js/453.b587544c.chunk.js",
     "static/media/wall1.jpg": "/PowerTechFusion/static/media/wall1.9e532a59211832e55f0c.jpg",
@@ -12,12 +12,12 @@
     "static/media/computerhard.jpg": "/PowerTechFusion/static/media/computerhard.7a71997e217801595640.jpg",
     "static/media/Itservices.jpg": "/PowerTechFusion/static/media/Itservices.b84c67291df5f4adde44.jpg",
     "index.html": "/PowerTechFusion/index.html",
-    "main.66bd0fe1.css.map": "/PowerTechFusion/static/css/main.66bd0fe1.css.map",
+    "main.5393797f.css.map": "/PowerTechFusion/static/css/main.5393797f.css.map",
     "main.4b12af2a.js.map": "/PowerTechFusion/static/js/main.4b12af2a.js.map",
     "453.b587544c.chunk.js.map": "/PowerTechFusion/static/js/453.b587544c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66bd0fe1.css",
+    "static/css/main.5393797f.css",
     "static/js/main.4b12af2a.js"
   ]
 }
