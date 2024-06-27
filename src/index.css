@@ -1,0 +1,804 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: auto;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.headerr{
+  box-shadow: 0px 1px 20px rgb(58, 58, 58);
+  height: 90px;
+}
+.namee {
+  position: relative;
+  height: 30px;
+  overflow: hidden; /* Ensure ::after is contained within the parent */
+}
+.fixee{
+border: 1px solid red !important;
+  width: 30px !important;
+}
+.headerr{
+  z-index: 30;
+}
+nav a{
+color:white
+
+}
+nav a:hover{
+  color: white;
+cursor: pointer;
+}
+
+.namee::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Height of the underline */
+  width: 100%;
+  background: white; /* Color of the underline */
+  transform: translateX(-110%);
+  transition: transform 0.3s ease-out;
+}
+
+.namee:hover::after {
+  transform: translateX(0);
+}
+
+.with {
+  position: relative;
+  height: 40px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  transition: 1s;
+  z-index: 1;
+  box-shadow: 0px 1px 10px lightgray;
+}
+.with p{
+  width: 100%;
+  text-align: center;
+  text-shadow: 0px 3px 5px lightgray;
+}
+
+
+.with::after {
+  top: 0%;
+  left: 50%;
+  border-radius: 50px;
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+  height: 100%;
+  width: 0%;
+  background-color: rgb(53, 192, 238);
+  z-index: -1;
+}
+.with:hover::after {
+  width: 100%;
+  left: 0%;
+  transition: 1s;
+}
+.with:hover {
+  color: rgb(236, 233, 233);
+  transition: 1s;
+}
+
+
+.back {
+position: relative;
+  height:100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.back::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  animation: change 10s linear infinite;
+}
+
+@keyframes change {
+  0% {
+    background-image: linear-gradient(rgba(59, 59, 59, 0.5), rgba(22, 22, 22, 0.5)), url("../public/img/hardware.webp");
+    background-size: 100% 100%;
+    transform: scale(1);
+  }
+  50% {
+    background-image: linear-gradient(rgba(59, 59, 59, 0.5), rgba(22, 22, 22, 0.5)), url("../public/img/pixel.jpg");
+    background-size: 100% 100%;
+    transform: scale(1.1);
+  }
+  100% {
+    background-image: linear-gradient(rgba(59, 59, 59, 0.5), rgba(25, 41, 133, 0.377)), url("../public/img/imgg2.jpg");   
+     background-size: 100% 100%;
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+.clippy{
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 100% 72%, 100% 100%, 74% 75%, 0% 75%);}
+.heading::before{
+  content: "POWER_TECH_FUSION";
+  background: linear-gradient(to right, white, rgb(63, 63, 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; 
+  height: 45px;
+  border-right:0.25rem solid rgb(93, 108, 245);
+  position: absolute;
+  top:0;
+  left:0;
+  animation: slider 1.5s linear infinite;
+  -webkit-animation: slider 3s linear infinite;
+  overflow: hidden;
+}
+@keyframes slider {
+  0%{
+      width:0%;
+  }
+  50%{
+      width:95%;
+  }
+  100%{
+      width:0%;
+  }
+  
+}
+
+
+.butt2 button{
+  width: 130px;
+}
+.companyy {
+  animation: move 5s linear infinite alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    text-shadow: 3px 5px 8px rgb(82, 81, 81);
+  }
+  25% {
+    text-shadow: -3px 5px 10px rgb(148, 147, 147);
+  }
+  50% {
+    text-shadow: -3px -5px 10px rgb(104, 126, 133);
+  }
+  75% {
+    text-shadow: 3px -5px 10px rgb(107, 134, 161);
+  }
+  100% {
+    text-shadow: 3px 5px 10px rgb(92, 99, 105);
+  }
+}
+
+.scaleimg {
+  transition: 1s all;
+  transform: scale(1);
+  background-image: linear-gradient(rgba(75, 75, 75, 0.5), rgba(112, 111, 111, 0.5)), url("../public/img/Itservices.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projectdiv:hover .scaleimg {
+  transform: scale(1.1);
+  transition: 1s all;
+  cursor: pointer;
+  background-image: url("../public/img/Itservices.jpg"); /* Remove gradient */
+  background-size: 100% 100%;
+}
+
+.scale2img {
+  transition: 1s all;
+  transform: scale(1);
+  background-image: linear-gradient(rgba(75, 75, 75, 0.5), rgba(112, 111, 111, 0.5)), url("../public/img/camera.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projectdiv:hover .scale2img {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 1s all;
+  background-image: url("../public/img/camera.jpg"); /* Remove gradient */
+  background-size: 100% 100%;
+}
+
+.scale3img {
+  transition: 1s all;
+  transform: scale(1);
+  background-image: linear-gradient(rgba(75, 75, 75, 0.5), rgba(112, 111, 111, 0.5)), url("../public/img/computerhard.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projectdiv:hover .scale3img {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 1s all;
+  background-image: url("../public/img/computerhard.jpg"); /* Remove gradient */
+  background-size: 100% 100%;
+}
+
+.projectsections{
+  box-shadow: 0px 1px 10px gray;
+  transition: 1s all;
+  border-radius: 10px;
+}
+.oneee{
+  border-radius: 10px;
+  transition: 1s all;
+overflow: hidden;
+}
+.oneee:hover{
+  box-shadow: 0px 1px 10px gray;
+  transition: 1s all;
+cursor: pointer;
+}
+.movee{
+  background-image: linear-gradient(rgba(75, 75, 75, 0.6), rgba(41, 40, 40, 0.5)), url("../public/img/mitsubushi2.png");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-cssbuttons {
+  --btn-color: #275efe;
+  position: relative;
+  padding: 16px 32px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-color);
+  border-radius: 24px;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ .btn-cssbuttons:hover{
+  --btn-color: #3969f8;
+  box-shadow: 0px 2px 10px gray;
+  transition: 1s all;
+
+ }
+ .btn-cssbuttons span,
+ .btn-cssbuttons span span {
+  display: inline-flex;
+  vertical-align: middle;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons span {
+  transition-delay: 0.05s;
+ }
+ 
+ .btn-cssbuttons span:first-child {
+  padding-right: 7px;
+ }
+ 
+ .btn-cssbuttons span span {
+  margin-left: 8px;
+  transition-delay: 0.1s;
+ }
+ 
+ .btn-cssbuttons ul {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  transform: translateY(-50%);
+ }
+ 
+ .btn-cssbuttons ul li {
+  flex: 1;
+ }
+ 
+ .btn-cssbuttons ul li a {
+  display: inline-flex;
+  vertical-align: middle;
+  transform: translateY(55px);
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .btn-cssbuttons ul li a:hover {
+  opacity: 0.5;
+ }
+ 
+ .fixerr{
+  width: 120px !important;
+  color:black !important;
+ }
+ .fixerr:hover{
+  color:white !important;
+ }
+ .btn-cssbuttons:hover::before {
+  transform: scale(1.2);
+ }
+ 
+ .btn-cssbuttons:hover span,
+ .btn-cssbuttons:hover span span {
+  transform: translateY(-55px);
+ }
+ 
+ .btn-cssbuttons:hover ul li a {
+  transform: translateY(0);
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(1) a {
+  transition-delay: 0.15s;
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(2) a {
+  transition-delay: 0.2s;
+ }
+ 
+ .btn-cssbuttons:hover ul li:nth-child(3) a {
+  transition-delay: 0.25s;
+ }
+
+
+
+ /* slider */
+ .logos {
+  background-image: linear-gradient(rgba(59, 59, 59, 0.3), rgba(22, 22, 22, 0.3)), url("../public/img/wall1.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.logos h1{
+text-shadow:3px 2px 10px #b4b4b4;
+
+}
+
+.logos::before,
+.logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(116, 116, 116, 0.9));
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(112, 111, 111, 0.9));
+}
+@media(max-width:610px) {
+  .logo-slide img {
+    height: 180px ;
+    width: 30% !important;
+  }
+}
+
+
+@media(max-width:460px) {
+  .logos::before {
+    background: none;
+  }
+  .logos::after {
+    background: none;
+  }
+  .logo-slide img {
+    height: 150px ;
+    width: 15%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1025px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .heading {
+   width: 100%;
+   font-size: 25px;
+  }
+  .butt2{
+    margin-left: -30px;
+  }
+}
+@media (min-width: 350px) and (max-width: 400px) {
+  .heading {
+   width: 100%;
+   font-size: 25px;
+   margin-left: 18px;
+  }
+  .butt2{
+    margin-left: -10px;
+  }
+}
+
+
+.logo-slide {
+  display: flex;
+  animation: slide 10s linear infinite;
+  transition: ease-in-out;
+}
+
+.logo-slide:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.logo-slide img {
+  height: 120px ;
+  width: 12%;
+margin-left: 30px;
+margin-top: 30px;
+  flex-shrink: 0;
+}
+.logo-slide img:hover{
+  transform: scale(1.1);
+  transition: 1s;
+
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half the width for continuous effect */
+  }
+}
+.slideimg{
+  height: 160px !important;
+  width: 17% !important;
+  margin-top: -15px !important;
+}
+
+.easyy{
+  transition: 1s all ease-in-out;
+}
+.easyy:hover{
+  text-shadow: 0px 3px 10px gray;
+  transition: 1s all;
+
+}
+
+
+
+/* loader */
+.loading {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #4c86f9;
+  --second-color: #49a84c;
+  --third-color: #f6bb02;
+  --fourth-color: #f6bb02;
+  --fifth-color: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(248, 236, 236);
+  gap: 6px;
+  height: 100vh;
+ }
+ 
+ .loading span {
+  width: 10px;
+  height: 100px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out infinite;
+ }
+ 
+ .loading span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+ }
+ 
+ .loading span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+ }
+ 
+ .loading span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+ }
+ 
+ .loading span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+ }
+ 
+ @keyframes scale {
+  0%, 40%, 100% {
+   transform: scaleY(0.05);
+  }
+ 
+  20% {
+   transform: scaleY(1);
+  }
+ }
+
+
+
+ @media (max-width: 1024px) {
+  .removee {
+    display: none;
+  }}
+  @media (max-width: 850px) {
+    .remove3 {
+      display: none;
+    }}
+ @media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  nav HashLink{
+font-size: 10px !important;
+  }
+
+
+
+  .anchor {
+    display: block;
+  }
+  .alll:hover{
+box-shadow: 0px 3px 10px gray !important;
+}
+
+  .sidebarr {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    background-color: rgba(66, 115, 250, 0.582);
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    border-radius: 0px 0px 0px 50px;
+    box-shadow: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    z-index: 100;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebarr a{
+    width: 100%;
+    color: white;
+  }
+  .sidebarr.open {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 800px) {
+  .anchor {
+    display: none;
+  }
+}
+.eeasy{
+  transition: 1s all ease-in-out;
+}
+.eeasy:hover{
+  transition: 1s all ease-in-out;
+}
+
+
+
+
+
+/* ------------------About US */
+
+
+.aboutus > h3 {
+  color: #fca817;
+  text-shadow: 0px 1px 10px rgb(156, 155, 155);
+}
+.aboutus > h1 {
+  line-height:1.1 ;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1f2026;
+}
+
+.pico > .pici {
+  overflow: hidden;
+  float: left;
+}
+.pici > .style2 {
+  filter: grayscale(1);
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+.pici::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  left: 50%;
+  border-radius: 200%;
+  top: 40%;
+  background-color: rgba(163, 163, 170, 0.438);
+}
+.pici:hover::after {
+  top: -50%;
+  left: -100%;
+  cursor: pointer;
+  height: 300px;
+  width: 140px;
+  transition: 2s;
+}
+.pici:hover .style2 {
+  filter: none;
+  cursor: pointer;
+
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.pico .pico1 {
+  position: relative;
+  left: 3%;
+  z-index: 1;
+
+}
+.pico1:hover::after {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+
+}
+
+.iconi:hover i {
+  color: #ffffff;
+  transition: 1s;
+  cursor: pointer;
+
+}
+
+
+
+.pico2:hover::after {
+  cursor: pointer;
+  top: -70%;
+  left: -140%;
+  height: 500px;
+  width: 400px;
+}
+
+.pico2 > .style2 {
+  height: 100%;
+  width: 100%;
+}
+
+.pico > .thm {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 250px;
+  animation: thm 2s linear infinite alternate;
+}
+@keyframes thm {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pico > h1 {
+  position: absolute;
+  right: -5%;
+  font-size: 25px;
+  top: 20%;
+  transform: rotate(90deg);
+}
+
+.years > .besti > h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.years > .besti > h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.years > .besti > p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.future > h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.dude1 > .ome {
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  filter: grayscale(1);
+}
+.dude1:hover .ome {
+  filter: none;
+  cursor: pointer;
+  transition: 1s;
+}
+.dude1:hover .ome {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
