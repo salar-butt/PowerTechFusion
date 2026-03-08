@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerTechFusion</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="nav.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Learn.html">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+
+                        secondary: '#1A1A1A'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            background-color: #1A1A1A;
+            color: white;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(8, 8, 8, 0.95), rgba(27, 27, 133, 0.486)), url('https://readdy.ai/api/search-image?query=professional%20home%20repair%20team%20in%20uniform%20standing%20together%2C%20dark%20background%20with%20subtle%20lighting%2C%20high%20quality%20professional%20photo%2C%20realistic%2C%20showing%20diverse%20team%20of%20skilled%20workers&width=1200&height=600&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center right;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+            transition: ease-in-out;
+            box-shadow: 0 10px 25px rgba(12, 105, 245, 0.37);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
+        }
+
+        .project-card {
+            overflow: hidden;
+        }
+
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover {
+            cursor: pointer;
+
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid rgba(6, 6, 238, 0.877);
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FF6B00;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: #FF6B00;
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: "✓";
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .point:hover {
+            cursor: pointer;
+        }
+
+        .underline-animate {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            background-color: #f1f3f5;
+            /* Tailwind's blue-500 */
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-in-out;
+
+        }
+
+
+        .group:hover .underline-animate {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .group:not(:hover) .underline-animate {
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+
+        @keyframes big-bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 0 10px rgba(46, 123, 247, 0.959);
+                /* shadow stays with dot */
+            }
+
+            50% {
+                transform: translateY(-15px);
+                box-shadow: 0 10px 15px rgba(59, 130, 246, 0.4);
+            }
+        }
+
+        .big-bounce {
+            animation: big-bounce 1s infinite;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <nav class="bg-blue-500 z-20 shadow-lg backdrop-blur sticky top-0  w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex items-center   ">
+                    <img src="./img/logo.png" class="h-14 w-14 " alt="">
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white">
+                        PowerTechFusion</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center md:space-x-2 lg:space-x-6">
+                    <a href="#testimonial" class="nav-link group text-md relative text-white transition-colors">Reviews
+                        <span class="underline-animate"></span></a>
+                    <a href="#services" class="nav-link group text-md relative text-white transition-colors">Services
+                        <span class="underline-animate"></span></a>
+                    <a href="#about" class="nav-link group text-md relative text-white transition-colors">About Us <span
+                            class="underline-animate"></span></a>
+                    <a href="#projects" class="nav-link group text-md relative text-white transition-colors">Projects
+                        <span class="underline-animate"></span></a>
+                    <div class="flex items-center  px-3 py-2 rounded-md overflow-hidden cursor-pointer">
+                        <a href="#contact"
+                            class="relative group z-10 overflow-hidden bg-white text-blue-600 font-semibold px-6 py-2 rounded-full whitespace-nowrap  transition duration-300">
+                            Contact Us
+                            <span
+                                class="absolute top-8 z-200 left-0 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+                            <span
+                                class="absolute top-2 z-200 right-0 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+
+                        </a>
+
+                        <div class="relative z-10 md:hidden ml-4 w-10 h-10 flex items-center justify-center">
+                            <i
+                                class="ri-menu-line ri-2x text-blue-700 group-hover:text-blue-900 transition-colors duration-300"></i>
+                        </div>
+                    </div>
+                    <button id="themeToggle" class="text-gray-700 dark:text-gray-300">🌓</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden z-50 ">
+                    <button id="menuButton" class="text-gray-800 dark:text-gray-200">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 text-red-500 w-8 hidden"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="fixed h-auto top-0 right-0 rounded-md w-64 border-l border-gray-300 bg-white 
+         transform translate-x-full transition-transform duration-500 ease-in-out z-40 p-5 space-y-4">
+
+                <a href="#testimonial" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Reviews
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+                <a href="#services" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Services
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1 ">→</span>
+                </a>
+
+                <a href="#about" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    About Us
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+                <a href="#projects" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Projects
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+
+                <a href="#contact"
+                    class="group relative bg-blue-600 text-white px-8 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-semibold inline-block overflow-hidden">
+                    Contact Us
+                    <span
+                        class="absolute top-3 right-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                    <span
+                        class="absolute bottom-3 right-full w-full h-0.5 bg-white transition-all duration-500 group-hover:right-0"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="hero-section min-h-screen w-full flex items-center pt-20">
+        <div class="container lg-auto mx-left lg:px-6 w-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-5xl  md:text-6xl lg:text-5xl font-bold mb-6 leading-tight">Fusion of Technology and
+                        <span class="text-blue-400">Trusted Services</span>
+                    </h1>
+                    <div class="w-24 h-1 bg-blue-400 mb-8"></div>
+                    <p class="text-xl mb-10 text-gray-300 max-w-2xl text-justify leading-relaxed">PowerTechFusion is
+                        your trusted
+                        partner for cutting-edge IT solutions and expert home maintenance services. Driven by innovation
+                        and excellence, we deliver dependable, efficient, and high-performance results tailored to your
+                        needs.</p>
+                    <div class="flex flex-wrap gap-12 mb-12">
+                        <div class="text-center">
+                            <p class="text-4xl font-bold text-blue-400">5K+</p>
+                            <p class="text-lg text-gray-400">Projects Done</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-bold text-blue-400">50+</p>
+                            <p class="text-lg text-gray-400">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-bold text-blue-400">10+</p>
+                            <p class="text-lg text-gray-400">Team Members</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services"
+                            class="group relative bg-blue-500 text-white px-8 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-semibold inline-block overflow-hidden">
+                            Services
+                            <span
+                                class="absolute top-3 right-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                            <span
+                                class="absolute bottom-3 right-full w-full h-0.5 bg-white transition-all duration-500 group-hover:right-0"></span>
+                        </a>
+                        <a href="./Learn.html"
+                            class="group relative border border-white whitespace-nowrap hover:border-blue-500 hover:bg-blue-500  text-white px-8 py-3 rounded-button  transition-all font-semibold inline-block overflow-hidden">Learn
+                            More
+
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Hero image is part of the background -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[#222222]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Our <span class="text-blue-500">Professional Services</span>
+                </h2>
+
+                <!-- Decorative Lines and Dots -->
+                <div class="relative flex items-center justify-center">
+                    <!-- Left dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute left-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+
+                    <!-- Center line -->
+                    <div class="w-60 h-1 bg-blue-500 mx-auto mb-6"></div>
+
+                    <!-- Right dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute right-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+                </div>
+
+
+                <!-- Description -->
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">
+                    We provide advanced IT solutions and expert home maintenance services ensuring your systems run
+                    smoothly and your spaces stay in top condition. </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="group w-16 h-16 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mb-6 transition-colors duration-300">
+                        <i
+                            class="ri-camera-switch-fill ri-2x text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Security Camera Solutions</h3>
+                    <p class="text-gray-400 mb-6 ">Comprehensive security camera solutions including installation,
+                        monitoring, troubleshooting, and maintenance to ensure 24/7 safety and surveillance for your
+                        home or business.</p>
+                    <a href="./Learn.html" class="group relative text-blue-500 flex items-center  w-28">
+                        Learn More
+                        <i
+                            class="ri-arrow-right-line ml-1 transform transition-transform duration-300 group-hover:translate-x-2"></i>
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-500 group-hover:w-full group-hover:right-0"></span>
+                    </a>
+
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 group flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mb-6">
+                        <i
+                            class="ri-printer-line group-hover:text-white transition-colors duration-300 ri-2x text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Printer Services</h3>
+                    <p class="text-gray-400 mb-6">Comprehensive printer services including installation, maintenance,
+                        and print management for all business needs.
+                        Power Tech Fusion ensures reliable performance with genuine supplies and expert on-site support.
+                    </p>
+                    <a href="./Learn.html" class="group relative text-blue-500 flex items-center  w-28">
+                        Learn More
+                        <i
+                            class="ri-arrow-right-line ml-1 transform transition-transform duration-300 group-hover:translate-x-2"></i>
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-500 group-hover:w-full group-hover:right-0"></span>
+                    </a>
+
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 flex items-center group justify-center bg-blue-500 bg-opacity-10 rounded-full mb-6">
+                        <i
+                            class="ri-community-line ri-2x group-hover:text-white transition-colors duration-300 text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">TeleCommunication Services</h3>
+                    <p class="text-gray-400 mb-6">Reliable telecommunication services including structured cabling, PBX
+                        systems, and VoIP solutions tailored for seamless business connectivity.
+                        Power Tech Fusion delivers secure, scalable communication networks to keep your teams connected
+                        and productive.</p>
+                    <a href="./Learn.html" class="group relative text-blue-500 flex items-center  w-28">
+                        Learn More
+                        <i
+                            class="ri-arrow-right-line ml-1 transform transition-transform duration-300 group-hover:translate-x-2"></i>
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-500 group-hover:w-full group-hover:right-0"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- category -->
+        <div class="max-w-6xl mx-auto" id="faq">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div
+                    class="bg-white/5 service-card backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                        <img src="./img/call.avif"
+                            alt="Social Media Ads" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Web Designing</h3>
+                    <p class="text-gray-400 text-sm">Creative, responsive, and user-friendly web design that brings your
+                        brand to life.
+
+                    </p>
+                </div>
+                <div
+                    class="bg-white/5 service-card service-card  backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                        <img src="./img/printer4.webp"
+                            alt="Search Ads" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Digital Marketing</h3>
+                    <p class="text-gray-400 text-sm">Strategic digital marketing that drives traffic, engagement, and
+                        measurable growth</p>
+                </div>
+                <div
+                    class="bg-white/5 service-card  backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                        <img src="./img/it8.webp"
+                            alt="Display Ads" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2 text-center">SEO</h3>
+                    <p class="text-gray-400 text-sm">SEO solutions that elevate your search rankings, increase
+                        visibility, and drive targeted traffic to your business.
+                    </p>
+                </div>
+                <div
+                    class="bg-white/5 service-card  backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                        <img src="./img/it1.webp" alt="Video Ads" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">IT Hardware</h3>
+                    <p class="text-gray-400 text-sm">Giving you the accessories related to IT Hardware you required</p>
+                </div>
+                <div
+                    class="bg-white/5 service-card backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+                        <img src="./img/it3.webp" alt="Email Marketing" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Servers & Switches</h3>
+                    <p class="text-gray-400 text-sm">Making your system run smoothly and fast.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-6 mt-8">
+            <button
+                class="category-btn flex items-center gap-2 text-blue-500 border-b-2 border-blue-500 px-2 py-1 whitespace-nowrap"
+                data-category="video">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-computer-fill"></i>
+                </div>
+                <span>IT Solutions</span>
+            </button>
+            <button
+                class="category-btn flex items-center gap-2 text-gray-400 hover:text-gray-200 px-2 py-1 whitespace-nowrap"
+                data-category="brand">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-camera-2-fill"></i>
+                </div>
+                <span>Security & Surveillance</span>
+            </button>
+            <button
+                class="category-btn flex items-center gap-2 text-gray-400 hover:text-gray-200 px-2 py-1 whitespace-nowrap"
+                data-category="growth">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-printer-fill"></i>
+                </div>
+                <span>Printer Services</span>
+            </button>
+            <button
+                class="category-btn flex items-center gap-2 text-gray-400 hover:text-gray-200 px-2 py-1 whitespace-nowrap"
+                data-category="data">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-wireless-charging-fill"></i>
+                </div>
+                <span>Electrical Services</span>
+            </button>
+            <button
+                class="category-btn flex items-center gap-2 text-gray-400 hover:text-gray-200 px-2 py-1 whitespace-nowrap"
+                data-category="people">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-fridge-fill"></i>
+                </div>
+                <span>AC Services</span>
+            </button>
+            <button
+                class="category-btn flex items-center gap-2 text-gray-400 hover:text-gray-200 px-2 py-1 whitespace-nowrap"
+                data-category="more">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-community-line"></i>
+                </div>
+                <span>Telecommunication</span>
+            </button>
+        </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div
+                    class="md:w-1/2 mb-10 md:mb-0 relative overflow-hidden group hover:cursor-pointer rounded-lg transition-all duration-500 hover:shadow-[0_10px_30px] hover:shadow-blue-500/50">
+
+                    <img src="./img/visionstrategy.jpg" alt="Professional home repair worker"
+                        class="rounded-lg shadow-3xl object-cover object-top w-full h-[500px] transform transition-transform duration-500 group-hover:scale-110">
+
+                    <!-- Gradient Overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg transition-opacity duration-500 group-hover:opacity-0">
+                    </div>
+                </div>
+
+
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Why <span class="text-blue-500">Choose</span> Us
+                    </h2>
+                    <div class="w-20 h-1 bg-blue-500 mb-6"></div>
+                    <p class="text-gray-300 mb-8">With over 15 years of experience, Power Tech Fusion’s certified
+                        professionals deliver reliable IT hardware solutions and outstanding customer service tailored
+                        to meet the evolving needs of modern businesses.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-shield-check-line ri-lg text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Licensed & Insured</h3>
+                                <p class="text-gray-400 text-sm">Fully certified professionals you can trust</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-time-line ri-lg text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">On-Time Service</h3>
+                                <p class="text-gray-400 text-sm">We value your time and always arrive promptly</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-price-tag-3-line ri-lg text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Fair Pricing</h3>
+                                <p class="text-gray-400 text-sm">Transparent quotes with no hidden fees</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-customer-service-2-line ri-lg text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">24/7 Support</h3>
+                                <p class="text-gray-400 text-sm">Emergency services available anytime</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-8 mb-8">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-500">8+</p>
+                            <p class="text-gray-400 text-sm">Years Experience</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-500">98%</p>
+                            <p class="text-gray-400 text-sm">Client Satisfaction</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-blue-500">500+</p>
+                            <p class="text-gray-400 text-sm">Projects Completed</p>
+                        </div>
+                    </div>
+                    <a href="#contact"
+                        class="group relative bg-blue-500 text-white px-8 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-semibold inline-block overflow-hidden">
+                        Get Free Estimate
+                        <span
+                            class="absolute top-2 right-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-2 right-full w-full h-0.5 bg-white transition-all duration-500 group-hover:right-0"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recent Projects Section -->
+    <section id="projects" class="py-20 bg-[#222222] ">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Recent <span class="text-blue-500">Projects</span></h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">Explore some of our recent IT hardware and security system
+                    deployments that reflect Power Tech Fusion’s commitment to quality, innovation, and client-focused
+                    solutions.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/camera.webp" alt="Camera Instalation"
+                        class="w-full h-full object-cover object-top" />
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">Camera Installation at ORIENT</h3>
+                        <p class="text-gray-300 mb-2">professionally installed a high-resolution CCTV surveillance
+                            system at ORIENT, ensuring seamless integration and optimal security coverage.</p>
+                        <p class="text-blue-500 mb-4">Completed in 2 weeks</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/printer.webp" alt="Printer Service" class="w-full h-full object-cover object-top"> >
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">Printer's Maintainance & Service</h3>
+                        <p class="text-gray-300 mb-2">Provides reliable printer maintenance services at Green
+                            Univerisity, ensuring smooth operation and minimal downtime.</p>
+                        <p class="text-blue-500 mb-4">Completed Within 3 Days</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/electric.webp" alt="Electrical System Upgrade"
+                        class="w-full h-full object-cover object-top">
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">Electrical System Upgrade</h3>
+                        <p class="text-gray-300 mb-2">Complete rewiring and panel installation</p>
+                        <p class="text-blue-500 mb-4">Completed in 5 days</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/telecommunication.webp" alt="telecommunication Services"
+                        class="w-full h-full object-cover object-top">
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">TeleCommunication Services</h3>
+                        <p class="text-gray-300 mb-2">Efficient Telecommunication services at Spice Bazaar, ensuring
+                            seamless connectivity and communication infrastructure.</p>
+                        <p class="text-blue-500 mb-4">Completed in 1 week</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/ac.webp" alt="Deck Construction" class="w-full h-full object-cover object-top">
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">Air Conditioning Installation & Services</h3>
+                        <p class="text-gray-300 mb-2">Expert Air Conditioning installation and maintenance services at
+                            Enricher's Group, ensuring optimal cooling and system efficiency.</p>
+                        <p class="text-blue-500 mb-4">Completed in 4 days</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="./img/biometric.jpg" alt="Exterior Painting"
+                        class="w-full h-full object-cover object-top">
+                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+                        <h3 class="text-xl font-bold mb-2">Biometric Machine Maintainence</h3>
+                        <p class="text-gray-300 mb-2">Provides prompt and reliable biometric machine maintenance at DIN
+                            Industries to ensure accurate and uninterrupted access control.</p>
+                        <p class="text-blue-500 mb-4">Completed in 3 days</p>
+                        <a href="#" class="text-white flex items-center hover:text-blue-500 transition-colors">
+                            View Details <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center  ">
+                <a href="#"
+                    class="group relative overflow-hidden bg-blue-500 text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">
+                    View All Projects
+                    <span
+                        class="absolute top-2 right-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                    <span
+                        class="absolute bottom-2 left-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Question's -->
+    <section id="faq" class="py-20 relative overflow-hidden ">
+        <div class="absolute inset-0 "></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-12 items-start">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Have <br><span class="gradient-text">Questions?</span></h2>
+                    <p class="text-gray-400">Find answers to commonly asked questions about our platform</p>
+                </div>
+                <div class="space-y-6">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="border-b-2 border-gray-700/50 pb-6 transition-all duration-700">
+                        <button class="accordion-btn w-full flex justify-between items-center py-4 text-left group"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-medium text-lg group-hover:text-primary transition-colors">
+                                How does your team manage IT hardware installations?
+                            </span>
+                            <div
+                                class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-800/50 text-primary accordion-icon group-hover:bg-primary/10 transition-colors">
+                                <i class="ri-add-line"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content hidden transition-all duration-500 ease-in-out">
+                            <p class="text-gray-400 pt-4">
+                                Our team follows a structured deployment process for IT hardware, ensuring proper
+                                configuration, minimal downtime, and full client satisfaction. All systems are tested
+                                before handover.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border-b-2 border-gray-700/50 pb-6 transition-all duration-700">
+                        <button class="accordion-btn w-full flex justify-between items-center py-4 text-left group"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-medium text-lg group-hover:text-primary transition-colors">
+                                Do you provide on-site support for telecommunication services?
+                            </span>
+                            <div
+                                class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-800/50 text-primary accordion-icon group-hover:bg-primary/10 transition-colors">
+                                <i class="ri-add-line"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content hidden transition-all duration-500 ease-in-out">
+                            <p class="text-gray-400 pt-4">
+                                Yes, we offer complete on-site support including installation, testing, and
+                                troubleshooting of structured cabling, switches, and VoIP systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border-b-2 border-gray-700/50 pb-6 transition-all duration-700">
+                        <button class="accordion-btn w-full flex justify-between items-center py-4 text-left group"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-medium text-lg group-hover:text-primary transition-colors">
+                                Can your solutions scale with our growing infrastructure?
+                            </span>
+                            <div
+                                class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-800/50 text-primary accordion-icon group-hover:bg-primary/10 transition-colors">
+                                <i class="ri-add-line"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content hidden transition-all duration-500 ease-in-out">
+                            <p class="text-gray-400 pt-4">
+                                Absolutely. All our systems and services are designed with scalability in mind, allowing
+                                for easy expansion as your business grows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border-b-2 border-gray-700/50 pb-6 transition-all duration-700">
+                        <button class="accordion-btn w-full flex justify-between items-center py-4 text-left group"
+                            onclick="toggleAccordion(this)">
+                            <span class="font-medium text-lg group-hover:text-primary transition-colors">
+                                Do you offer ongoing maintenance contracts i.e: SLA?
+                            </span>
+                            <div
+                                class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-800/50 text-primary accordion-icon group-hover:bg-primary/10 transition-colors">
+                                <i class="ri-add-line"></i>
+                            </div>
+                        </button>
+                        <div class="accordion-content hidden transition-all duration-500 ease-in-out">
+                            <p class="text-gray-400 pt-4">
+                                Yes, we provide flexible maintenance contracts that include regular system health
+                                checks, updates, and priority support.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonial" class="py-20 bg-[#222222]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our <span class="text-blue-500">Clients</span> Say
+                </h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with
+                    our home repair services.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-500 text-4xl absolute -top-5 left-8">"</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gray-700 rounded-full flex overflow-hidden items-center justify-center mr-4">
+                            <img src="./img/orient.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mr. Awais</h4>
+                            <p class="text-gray-400 text-sm">ORIENT Material/Apparel</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 pt-4 ">The team demonstrated exceptional professionalism in delivering
+                        and installing IT hardware and security solutions. From high-quality accessories to a seamlessly
+                        integrated camera system, the work exceeded expectations and was completed ahead of schedule
+                        with minimal disruption.</p>
+
+                    <div class="flex text-blue-500 mt-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-500 text-4xl absolute -top-5 left-8">"</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden flex items-center justify-center mr-4">
+                            <img src="./img/alifatima.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mr. Ahmad</h4>
+                            <p class="text-gray-400 text-sm">Ali Fatima Hospital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 pt-4">The team provided and installed high-performance servers and
+                        network switches for our company, ensuring a stable and scalable IT infrastructure. Their
+                        attention to detail, technical proficiency, and timely delivery greatly enhanced our operational
+                        efficiency.</p>
+
+                    <div class="flex text-blue-500 mt-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-500 text-4xl absolute -top-5 left-8">"</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 bg-gray-700 rounded-full overflow-hidden flex items-center justify-center mr-4">
+                            <img src="./img/utf.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mr. Fayyaz</h4>
+                            <p class="text-gray-400 text-sm">University of Faisalabad</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 pt-4">The team delivered and installed a comprehensive
+                        telecommunication system and a large volume of IT equipment for our university. Their
+                        professionalism, technical expertise, and commitment to timely execution made the entire process
+                        smooth and highly effective.</p>
+
+                    <div class="flex text-blue-500 mt-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/+923236379199" class="fixed h-[80px] w-[80px] right-4 bottom-10 z-50" id="whatsapp-btn">
+        <img src="./img/whatsapp.png" alt="whatsapp" />
+    </a>
+
+
+    <!-- Tooltip -->
+    <div id="whatsapp-tooltip"
+        class="fixed right-[90px] bottom-[110px] z-20 bg-blue-600 text-white p-2 rounded shadow-lg hidden">
+        Contact us on WhatsApp
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#1A1A1A]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-blue-500">Touch</span></h2>
+                    <div class="w-20 h-1 bg-blue-500 mb-6"></div>
+                    <p class="text-gray-300 mb-8 max-w-lg">Contact us today for a free consultation and estimate. Our
+                        team is ready to assist you with reliable IT hardware, security, and telecommunication solutions
+                        tailored to your business needs.</p>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-map-pin-line text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Our Location</h3>
+                                <p class="text-gray-400">Office#3, Madani-Center Opposite Waqas-Biryani,TCS Office
+                                    HallRoad, Lahore</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-phone-line text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Call Us</h3>
+                                <p class="text-gray-400">M.Salar Butt: +923236379199 </br>Hafiz Bilal: +923258061035
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-mail-line text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Email Us</h3>
+                                <p class="text-gray-400">info.powertechfusion@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-blue-500 bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-time-line text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Working Hours</h3>
+                                <p class="text-gray-400">Monday-Friday: 10am-5pm<br>Saturday: 11am-3pm<br>Sunday: Closed
+                                    (Emergency Services Available)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61577619736315"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-twitter-x-line text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/powertech-fusion-6b0526316/"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-[#2A2A2A] p-8 rounded">
+                        <h3 class="text-2xl font-bold mb-6">Request a Free Estimate</h3>
+
+                        <form id="contactForm" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+                                    <input type="text" id="name"
+                                        class="w-full bg-[#333333] border-none text-white p-3 rounded"
+                                        placeholder="John Smith" name="name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                                    <input type="email" id="email"
+                                        class="w-full bg-[#333333] border-none text-white p-3 rounded"
+                                        placeholder="john@example.com" name="email">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone"
+                                        class="w-full bg-[#333333] border-none text-white p-3 rounded"
+                                        placeholder="(+92) 123-4567" name="phoneno">
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-gray-300 mb-2">Service Needed</label>
+                                    <input type="hidden" name="service_value" id="service_value">
+                                    <div class="relative">
+                                        <select name="Service" id="service"
+                                            class="w-full bg-[#333333] border-none text-white p-3 rounded appearance-none pr-8">
+                                            <option value="">Select a service</option>
+                                            <option value="Plumbing">Plumbing</option>
+                                            <option value="Electrical">Electrical</option>
+                                            <option value="Carpentry">Carpentry</option>
+                                            <option value="Painting">Painting</option>
+                                            <option value="Renovation">Renovation</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+
+                                        <div
+                                            class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                            <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-300 mb-2">Project Details</label>
+                                <textarea id="message" rows="5"
+                                    class="w-full bg-[#333333] border-none text-white p-3 rounded"
+                                    placeholder="Please describe your project or issue..." name="message"></textarea>
+                            </div>
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-3">
+                                    <span class="text-gray-300 text-sm">I agree to the <a href="#"
+                                            class="text-blue-500 hover:underline">terms and conditions</a> and <a
+                                            href="#" class="text-blue-500 hover:underline">privacy policy</a>.</span>
+                                </label>
+                            </div>
+                            <button type="submit"
+                                class="bg-blue-500 text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium w-full">Send
+                                Email</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trust Badges Section -->
+    <section class="py-12 bg-[#222222]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center group bg-blue-500 hover:bg-opacity-100 cursor-pointer bg-opacity-10 rounded-full mx-auto mb-2">
+                        <i class="group-hover:text-white ri-shield-check-line ri-2x text-blue-500"></i>
+                    </div>
+                    <p class="text-gray-300 font-bold">Licensed & Insured</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="group w-16 h-16 flex items-center justify-center bg-blue-500 hover:bg-opacity-100 cursor-pointer bg-opacity-10 rounded-full mx-auto mb-2">
+                        <i class="group-hover:text-white ri-medal-line ri-2x text-blue-500"></i>
+                    </div>
+                    <p class="text-gray-300 font-bold">15+ Years Experience</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="group w-16 h-16 flex items-center justify-center bg-blue-500 hover:bg-opacity-100 cursor-pointer bg-opacity-10 rounded-full mx-auto mb-2">
+                        <i class="group-hover:text-white ri-thumb-up-line ri-2x text-blue-500"></i>
+                    </div>
+                    <p class="text-gray-300 font-bold">98% Satisfaction Rate</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="group w-16 h-16 flex items-center justify-center bg-blue-500 hover:bg-opacity-100 cursor-pointer bg-opacity-10 rounded-full mx-auto mb-2">
+                        <i class="group-hover:text-white ri-24-hours-line ri-2x text-blue-500"></i>
+                    </div>
+                    <p class="text-gray-300 font-bold">24/7 Emergency Service</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="group w-16 h-16 flex items-center justify-center bg-blue-500 hover:bg-opacity-100 cursor-pointer bg-opacity-10 rounded-full mx-auto mb-2">
+                        <i class="group-hover:text-white ri-wallet-3-line ri-2x text-blue-500"></i>
+                    </div>
+                    <p class="text-gray-300 font-bold">Transparent Pricing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#1A1A1A] pt-16 pb-8">
+        <div class="container mx-auto   lg:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:gap-8 md:gap-6   mb-12">
+                <div>
+                    <div class=" w-60 flex justify-between">
+                        <img class="h-12 w-12" src="./img/logo.png" alt="">
+                        <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">PowerTechFusion</a>
+                    </div>
+                    <p class="text-gray-400 mb-6">We delivers innovative and reliable IT solutions tailored to your
+                        needs with high-performance results.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61577619736315" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="https://x.com/PowerTechFusion" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-twitter-x-line text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/powertech-fusion-6b0526316/" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 ">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li class="point">
+                            <a class=" group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                Security Camera
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+
+
+                        <li class="point">
+                            <a class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                Electricsl Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                TeleCommunication
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                Printer's
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                IT Hardware Accessories
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                Air Conditioning
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                About Us
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li><a href="#projects"
+                                class="group text-md relative text-gray-400 hover:text-blue-400 transition-colors">Our
+                                Projects <span class="underline-animate"></span></a>
+                        </li>
+                        <li><a href="#testimonial"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">Testimonials
+                                <span class="underline-animate"></span></a>
+                        </li>
+                        <li><a href="#faq"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">FAQs
+                                <span class="underline-animate"></span></a></li>
+                        <li><a href="#contact"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">Contact
+                                Us <span class="underline-animate"></span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer rounded-full mr-3">
+                                <i class="ri-map-pin-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">Madani Center, Hall Road, Lahore</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer rounded-full mr-3">
+                                <i class="ri-phone-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">+923236379199/+923258061035</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer  rounded-full mr-3">
+                                <i class="ri-mail-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">info.powertechfusion@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group hover:bg-blue-500 cursor-pointer bg-[#2A2A2A] rounded-full mr-3">
+                                <i class="ri-time-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">Mon-Fri: 10am-5pm<br>Sat: 11am-3pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 mb-4 md:mb-0">© 2025 HomeFixPro. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="successPopup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <div class="bg-white text-black p-6 rounded-xl max-w-md w-full text-center shadow-xl relative">
+            <h2 class="text-2xl font-bold mb-4 text-green-600">Thank you!</h2>
+            <p class="mb-4">Your request has been submitted successfully.<br>We’ll get back to you shortly.</p>
+            <button id="closePopup" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // navbar
+        const menuButton = document.getElementById("menuButton");
+        const menuIcon = document.getElementById("menuIcon");
+        const closeIcon = document.getElementById("closeIcon");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = !menuIcon.classList.contains("hidden");
+
+            if (isOpen) {
+                // Open menu
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                menuIcon.classList.add("hidden");
+                closeIcon.classList.remove("hidden");
+            } else {
+                // Close menu
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                menuIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            }
+        });
+
+
+
+
+        // form submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const selectElement = document.getElementById('service');
+            const hiddenInput = document.getElementById('service_value');
+            hiddenInput.value = selectElement.value;
+            const successPopup = document.getElementById('successPopup');
+            const closePopup = document.getElementById('closePopup');
+
+            form.addEventListener('submit', function () {
+                // Delay popup to wait until email submission completes
+                setTimeout(() => {
+                    successPopup.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }, 1000);
+            });
+
+            closePopup.addEventListener('click', () => {
+                successPopup.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            successPopup.addEventListener('click', function (e) {
+                if (e.target === successPopup) {
+                    successPopup.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Remove active class from all cards
+                    pricingCards.forEach(c => {
+                        c.classList.remove('active');
+                        c.classList.remove('border-blue-500');
+                        c.classList.remove('border-2');
+                    });
+                    // Add active class to clicked card
+                    card.classList.add('active');
+                    card.classList.add('border-blue-500');
+                    card.classList.add('border-2');
+                    // Optional: Scroll the selected card into view
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.ri-menu-line');
+            const mobileMenu = document.querySelector('nav');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Project card hover effect enhancement
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                const overlay = card.querySelector('.project-overlay');
+                // Set initial opacity
+                if (overlay) {
+                    overlay.style.opacity = '0';
+                }
+                card.addEventListener('mouseenter', () => {
+                    if (overlay) {
+                        overlay.style.opacity = '1';
+                    }
+                });
+                card.addEventListener('mouseleave', () => {
+                    if (overlay) {
+                        overlay.style.opacity = '0';
+                    }
+                });
+            });
+        });
+
+
+        // categoryy
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const gridContainer = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-3.lg\\:grid-cols-5.gap-6');
+            // Add border-transparent to all buttons initially
+            categoryButtons.forEach(btn => {
+                if (!btn.classList.contains('border-blue-500')) {
+                    btn.classList.add('border-b-2', 'border-transparent', 'transition-all', 'duration-300');
+                }
+            });
+            const categoryContent = {
+                video: [
+                    {
+                        title: "Social Media Ads",
+                        description: "Engage your audience effectively",
+                        image: `${"./img/it8.webp"}`
+                    },
+                    {
+                        title: "Search Ads",
+                        description: "Reach ready-to-buy customers",
+                        image: "https://readdy.ai/api/search-image?query=premium%2520search%2520engine%2520marketing%2520advertisement%2C%2520modern%2520tech%2520product%2520showcase%2C%2520professional%2520commercial%2520photography%2C%2520dark%2520elegant%2520background&width=400&height=300&seq=2&orientation=landscape"
+                    },
+                    {
+                        title: "Display Ads",
+                        description: "Build brand awareness",
+                        image: "https://readdy.ai/api/search-image?query=high-end%2520display%2520advertising%2520campaign%2C%2520luxury%2520brand%2520showcase%2C%2520professional%2520product%2520photography%2C%2520dark%2520sophisticated%2520atmosphere&width=400&height=300&seq=3&orientation=landscape"
+                    },
+                    {
+                        title: "Video Ads",
+                        description: "Tell your brand story",
+                        image: "https://readdy.ai/api/search-image?query=premium%2520video%2520advertising%2520campaign%2C%2520cinematic%2520product%2520showcase%2C%2520professional%2520commercial%2520videography%2C%2520dark%2520dramatic%2520setting&width=400&height=300&seq=4&orientation=landscape"
+                    },
+                    {
+                        title: "Email Marketing",
+                        description: "Nurture customer relationships",
+                        image: "https://readdy.ai/api/search-image?query=premium%2520email%2520marketing%2520campaign%2C%2520elegant%2520newsletter%2520design%2C%2520professional%2520digital%2520content%2C%2520dark%2520sophisticated%2520layout&width=400&height=300&seq=5&orientation=landscape"
+                    }
+                ],
+                brand: [
+                    {
+                        title: "Security System Integration ",
+                        description: "Making your system reliable",
+                        image: `${"./img/maintainence.webp"}`
+                    },
+                    {
+                        title: "CCTV Installation & Monitoring ",
+                        description: "Create lasting impressions",
+                        image: `${"./img/camera2.webp"}`
+                    },
+                    {
+                        title: "Biometric Services",
+                        description: "Giving accessibility only to authorized persons",
+                        image: `${"./img/attendance.webp"}`
+                    },
+                    {
+                        title: "Video Intercom Solutions",
+                        description: "Secure communication and visitor verification at entry points.",
+                        image: `${"./img/it3.webp"}`
+                    },
+                    {
+                        title: "Alarm & Intrusion Detection",
+                        description: "Burglar alarms, motion sensors, and alert systems for property protection.",
+                        image: `${"./img/it2.webp"}`
+                    }
+                ],
+                growth: [
+                    {
+                        title: "Printer Installation & Configuration",
+                        description: "Setting up printers for home or business use.",
+                        image: `${"./img/printer2.webp"}`
+                    },
+                    {
+                        title: "Printer Repair & Maintenance",
+                        description: "Fixing hardware issues and replacing faulty components.",
+                        image: `${"./img/printer3.webp"}`
+                    },
+                    {
+                        title: "Toner & Ink Cartridge Supply",
+                        description: "Providing original and compatible cartridges.",
+                        image: `${"./img/printer.webp"}`
+                    },
+                    {
+                        title: "Print Quality Optimization ",
+                        description: "Adjusting settings and servicing for better output quality.",
+                        image: `${"./img/printer4.webp"}`
+                    },
+                    {
+                        title: "Managed Print Services (MPS)",
+                        description: "Monitoring, maintaining, and supplying printers on a contract basis.",
+                        image: `${"./img/printer5.webp"}`
+                    }
+                ],
+                data: [
+                    {
+                        title: "Electrical Wiring & Installation",
+                        description: "Complete wiring for residential, commercial, and industrial setups.",
+                        image: `${"./img/electric.webp"}`
+                    },
+                    {
+                        title: "Electrical Maintenance & Repair",
+                        description: "Troubleshooting and fixing electrical faults.",
+                        image: `${"./img/electric1.webp"}`
+                    },
+                    {
+                        title: "Lighting Installation & Upgrades",
+                        description: " LED lighting, decorative lighting, and outdoor lighting solutions.",
+                        image: `${"./img/electric2.webp"}`
+                    },
+                    {
+                        title: "Electrical Panel & Circuit Breaker Services",
+                        description: "Installation, repair, and upgrading of panels and breakers.",
+                        image: `${"./img/electric3.webp"}`
+                    },
+                    {
+                        title: "Energy Efficiency Solutions",
+                        description: "Power audits, energy-saving device installation, and load management.",
+                        image: `${"./img/telecommunication.webp"}`
+                    }
+                ],
+                people: [
+                    {
+                        title: "AC Installation",
+                        description: "Setting up new air conditioning units for residential and commercial spaces.",
+                        image: `${"./img/ac1.avif"}`
+                    },
+                    {
+                        title: "AC Maintenance & Servicing",
+                        description: "Regular cleaning, inspection, and tune-ups for optimal performance.",
+                        image: `${"./img/ac2.avif"}`
+                    },
+                    {
+                        title: "AC Gas Refilling",
+                        description: "Recharging refrigerant for efficient cooling.",
+                        image: `${"./img/ac3.webp"}`
+                    },
+                    {
+                        title: "AC Upgrades & Replacement",
+                        description: "Replacing old units with modern, energy-efficient models.",
+                        image: `${"./img/ac4.webp"}`
+                    },
+                    {
+                        title: "HVAC System Installation & Support ",
+                        description: "Complete heating, ventilation, and air conditioning solutions.",
+                        image: `${"./img/telecommunication.webp"}`
+                    }
+                ],
+                more: [
+                    {
+                        title: "Innovation LabTelecom System Integration",
+                        description: "Linking voice, data, and video systems into one network.",
+                        image: `${"./img/it1.webp"}`
+                    },
+                    {
+                        title: "Network Cabling & Fiber Optic Installation",
+                        description: " Structured cabling for voice and data transmission.",
+                        image: `${"./img/telecommunication.webp"}`
+                    },
+                    {
+                        title: "Call Center Setup & Support.",
+                        description: "Providing hardware, software, and maintenance for customer service operations.",
+                        image: `${"./img/tele1.avif"}`
+                    },
+                    {
+                        title: "Telecom Equipment Maintenance ",
+                        description: "Repairing and upgrading telecom hardware like switches and routers.",
+                        image: `${"./img/tele2.avif"}`
+                    },
+                    {
+                        title: "Mobile Signal Boosting Solutions",
+                        description: "Installing signal boosters for improved cellular coverage.",
+                        image: `${"./img/electric3.webp"}`
+                    }
+                ]
+            };
+            function updateGrid(category) {
+                const content = categoryContent[category];
+                if (!content) return;
+                gridContainer.innerHTML = content.map(item => `
+<div  class="bg-white/5 service-card hover:cursor-pointer backdrop-blur-lg rounded-xl p-4 hover:transform hover:-translate-y-2 transition-all duration-300 group border border-white/10">
+<div class="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
+<img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="font-medium text-lg mb-2">${item.title}</h3>
+<p class="text-gray-400 text-sm">${item.description}</p>
+</div>
+`).join('');
+            }
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+                    // Update active state
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('text-blue-500', 'border-blue-500');
+                        btn.classList.add('text-gray-400', 'border-transparent');
+                    });
+                    this.classList.remove('text-gray-400', 'border-transparent');
+                    this.classList.add('text-blue-500', 'border-blue-500');
+                    // Update grid content
+                    updateGrid(category);
+                });
+            });
+        });
+
+
+        // question  toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            content.classList.toggle('hidden');
+
+            // Toggle plus/minus icon
+            if (icon.classList.contains('ri-add-line')) {
+                icon.classList.remove('ri-add-line');
+                icon.classList.add('ri-subtract-line');
+            } else {
+                icon.classList.remove('ri-subtract-line');
+                icon.classList.add('ri-add-line');
+            }
+        }
+
+        // whatsapp
+        const btn = document.getElementById("whatsapp-btn");
+        const tooltip = document.getElementById("whatsapp-tooltip");
+
+        btn.addEventListener("mouseenter", () => {
+            tooltip.classList.remove("hidden");
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            tooltip.classList.add("hidden");
+        });
+    </script>
+
+    <!-- email -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init('tUh7c5aSrXrPcOMfG'); // Your actual EmailJS public key
+        })();
+
+        const contactForm = document.getElementById('contactForm');
+        const selectElement = document.getElementById('service');
+        const hiddenInput = document.getElementById('service_value');
+        const successPopup = document.getElementById('successPopup');
+        const closePopupBtn = document.getElementById('closePopup');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                let valid = true;
+                const requiredFields = contactForm.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#FF6B00';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+
+                if (!valid) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                // Set hidden value from select
+                hiddenInput.value = selectElement.value;
+
+                // Send form
+                emailjs.sendForm('service_l39lp7k', 'template_iwf7545', contactForm)
+                    .then(() => {
+                        contactForm.reset();
+                        successPopup.classList.remove('hidden');
+                    })
+                    .catch((error) => {
+                        alert('Failed to send message. Try again later.');
+                        console.error('EmailJS error:', error);
+                    });
+            });
+        }
+
+        if (closePopupBtn) {
+            closePopupBtn.addEventListener('click', () => {
+                successPopup.classList.add('hidden');
+            });
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

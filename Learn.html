@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More About Us - logo</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#57B5E7', secondary: '#8DD3C7' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .underline-animate {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            background-color: #f1f3f5;
+            /* Tailwind's blue-500 */
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .group:hover .underline-animate {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .group:not(:hover) .underline-animate {
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+
+        .point:hover {
+            cursor: pointer;
+        }
+
+        .now {
+            background-image: linear-gradient(to right, rgba(8, 8, 8, 0.95), rgba(22, 22, 59, 0.486)), url('./img/it5.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .mainn {
+            background-image: linear-gradient(to right, rgba(8, 8, 8, 0.95), rgba(22, 22, 59, 0.486)), url('./img/it5.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navo {
+            background-image: linear-gradient(to right, rgba(8, 8, 8, 0.95), rgba(22, 22, 59, 0.486)), url('./img/it4.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hover-bar {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-bar::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%) rotate(10deg);
+            width: 10px;
+            height: 100%;
+            background: #3b82f6;
+            /* blue-500 */
+            opacity: 0;
+            transition: all 1s ease;
+        }
+
+        .hover-bar:hover::before {
+            left: calc(100% - 4px);
+            /* moves line to right */
+            opacity: 1;
+            transform: translateY(-50%) rotate(10deg);
+        }
+
+        @keyframes big-bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 0 10px rgba(46, 123, 247, 0.959);
+                /* shadow stays with dot */
+            }
+
+            50% {
+                transform: translateY(-15px);
+                box-shadow: 0 10px 15px rgba(59, 130, 246, 0.4);
+            }
+        }
+
+        .big-bounce {
+            animation: big-bounce 1s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-white ">
+    <nav class="bg-blue-500 z-20 shadow-lg backdrop-blur sticky top-0  w-full  h-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex items-center   ">
+                    <img src="./img/logo.png" class="h-14 w-14 " alt="">
+                    <a href="./index.html" class="text-2xl md:text-3xl font-['Pacifico'] text-white">
+                        PowerTechFusion</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex  items-center md:space-x-2 lg:space-x-6">
+                    <a href="./index.html" class="nav-link group text-md relative text-white transition-colors">Home
+                        <span class="underline-animate"></span></a>
+                    <a href="#services" class="nav-link group text-md relative text-white transition-colors">Services
+                        <span class="underline-animate"></span></a>
+                    <a href="#ourteam" class="nav-link group text-md relative text-white transition-colors">OurTeam
+                        <span class="underline-animate"></span></a>
+                    <a href="#review" class="nav-link group text-md relative text-white transition-colors">Reviews
+                        <span class="underline-animate"></span></a>
+                    <div class="flex items-center  px-3 py-2 rounded-md overflow-hidden cursor-pointer">
+                        <a href="#contact"
+                            class="relative group z-10 overflow-hidden bg-white text-blue-600 font-semibold px-6 py-2 rounded-full whitespace-nowrap  transition duration-300">
+                            Contact Us
+                            <span
+                                class="absolute top-8 z-200 left-0 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+                            <span
+                                class="absolute top-2 z-200 right-0 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+
+                        </a>
+
+                        <div class="relative z-10 md:hidden ml-4 w-10 h-10 flex items-center justify-center">
+                            <i
+                                class="ri-menu-line ri-2x text-blue-700 group-hover:text-blue-900 transition-colors duration-300"></i>
+                        </div>
+                    </div>
+                    <button id="themeToggle" class="text-gray-700 dark:text-gray-300">🌓</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden z-50 ">
+                    <button id="menuButton" class="text-gray-800 dark:text-gray-200">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 text-red-500 w-8 hidden"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="fixed h-auto top-0 right-0 rounded-md w-64 border-l border-gray-300 bg-white 
+         transform translate-x-full transition-transform duration-500 ease-in-out z-40 p-5 space-y-4">
+
+                <a href="#" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Home
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+                <a href="#services" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Services
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1 ">→</span>
+                </a>
+
+                <a href="#ourteam" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Our Team
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+                <a href="#review" class="group flex items-center gap-1 text-lg font-semibold text-blue-600">
+                    Reviews
+                    <span class="transition-all duration-300 transform group-hover:translate-x-1">→</span>
+                </a>
+
+
+                <a href="#contact"
+                    class="group relative bg-blue-600 text-white px-8 py-3 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-semibold inline-block overflow-hidden">
+                    Contact Us
+                    <span
+                        class="absolute top-3 right-0 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+                    <span
+                        class="absolute bottom-3 right-full w-full h-0.5 bg-white transition-all duration-500 group-hover:right-0"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden mainn">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+            <div class="text-center ">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Learn More About Us</h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-4">Discover our journey and mission rooted in
+                    innovation and excellence.
+                    Meet our passionate team dedicated to transforming the way you work.
+                    We empower growth and help you achieve lasting success.</p>
+                <a href="#contact"
+                    class="relative group z-10 overflow-hidden bg-white text-blue-600 font-semibold px-6 py-2 rounded-full whitespace-nowrap  transition duration-300">
+                    Contact Us
+                    <!-- Hover line directly above text -->
+                    <span
+                        class="absolute top-8 z-200 left-0 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-gray-900" id="innovation">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    Our <span class="text-blue-500">Road to Innovation</span>
+                </h2>
+
+                <!-- Decorative Lines and Dots -->
+                <div class="relative flex items-center justify-center">
+                    <!-- Left dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute left-64 md:left-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+
+                    <!-- Center line -->
+                    <div class="w-60 h-1 bg-blue-500 mx-auto mb-6"></div>
+
+                    <!-- Right dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute right-64 md:right-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+                </div>
+
+
+                <!-- Description -->
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">
+                    We provide advanced IT solutions and expert home maintenance services ensuring your systems run
+                    smoothly and your spaces stay in top condition. </p>
+            </div>
+
+            <div class="relative">
+                <!-- Center line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300"></div>
+
+                <div class="space-y-12">
+                    <!-- Card 1 -->
+                    <div class="flex items-center group">
+                        <div class="flex-1 text-right pr-8">
+                            <div
+                                class="bg-blue-300 hover:bg-gray-50 rounded-xl p-6 shadow-lg transition-transform duration-500 group-hover:-translate-x-4">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2019 - Foundation</h3>
+                                <p class="text-gray-600">Started with a vision to revolutionize digital experiences and
+                                    make technology accessible to everyone.</p>
+                            </div>
+                        </div>
+                        <!-- Center dot -->
+                        <div
+                            class="w-6 h-6 bg-blue-500 rounded-full relative z-10 flex items-center justify-center cursor-pointer hover:scale-125 transition-all">
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flex items-center group">
+                        <div class="flex-1 pr-8"></div>
+                        <div
+                            class="w-6 h-6 bg-gray-500 rounded-full relative z-10 flex items-center justify-center cursor-pointer hover:scale-125 transition-all">
+                        </div>
+                        <div class="flex-1 text-left pl-8">
+                            <div
+                                class="bg-gray-200 hover:bg-white rounded-xl p-6 shadow-lg transition-transform duration-500 group-hover:translate-x-4">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2021 - Growth</h3>
+                                <p class="text-gray-600">Reached 10,000+ satisfied customers and expanded our team to
+                                    include world-class talent.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flex items-center group">
+                        <div class="flex-1 text-right pr-8">
+                            <div
+                                class="bg-blue-300 hover:bg-gray-50 rounded-xl p-6 shadow-lg transition-transform duration-500 group-hover:-translate-x-4">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2023 - Innovation</h3>
+                                <p class="text-gray-600">Launched groundbreaking AI-powered features that transformed
+                                    how businesses operate and connect with customers.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="w-6 h-6 bg-blue-500 rounded-full relative z-10 flex items-center justify-center cursor-pointer hover:scale-125 transition-all">
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="flex items-center group">
+                        <div class="flex-1 pr-8"></div>
+                        <div
+                            class="w-6 h-6 bg-gray-500 rounded-full relative z-10 flex items-center justify-center cursor-pointer hover:scale-125 transition-all">
+                        </div>
+                        <div class="flex-1 text-left pl-8">
+                            <div
+                                class="bg-gray-200 hover:bg-white rounded-xl p-6 shadow-lg transition-transform duration-500 group-hover:translate-x-4">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2024 - Global Impact</h3>
+                                <p class="text-gray-600">Serving over 100,000+ users worldwide and recognized as a
+                                    leader in digital innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 now" id="ourteam">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+                <p class="text-xl text-blue-400">The passionate people behind our success</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 cursor-pointer">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center transition-all duration-300
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <img src="./img/salar.jpg" alt="Sarah Johnson"
+                        class="w-24 h-24 rounded-full mx-auto mb-6 object-cover object-top">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Salar Butt</h3>
+                    <p class="text-blue-600 font-medium mb-4">Chief Executive Officer</p>
+                    <p class="text-gray-600">Former VP at "PowerTechFusion"<br />Mr. Salar brings over 3 years of
+                        expertise in scaling
+                        technology-driven businesses and delivering world-class marketing solutions, cutting-edge
+                        website designs, and comprehensive hardware & software services. .</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center transition-all duration-300
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <img src="./img/bilal.jpg" alt="Michael Chen"
+                        class="w-24 h-24 rounded-full mx-auto mb-6 object-cover object-top">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Bilal</h3>
+                    <p class="text-blue-600 font-medium mb-4">Chief Technology Officer</p>
+                    <p class="text-gray-600">Former VP at "PowerTechFusion"<br /> Michael brings over 6 years of
+                        expertise in marketing and product consulting, alongside a strong background in designing
+                        scalable systems and mentoring the next generation of technology leaders..</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center transition-all duration-300
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <img src="./img/Ashfaqsaab.jpg" alt="Emily Rodriguez"
+                        class="w-24 h-24 rounded-full mx-auto mb-6 object-cover object-top">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mr. Ashfaq</h3>
+                    <p class="text-blue-600 font-medium mb-4">Chief Operations Officer</p>
+                    <p class="text-gray-600">He oversees the seamless delivery of all company services, ensuring
+                        operational excellence across every department. With a strong focus on efficiency, quality, and
+                        customer satisfaction, he aligns teams, resources, and strategies to consistently meet and
+                        exceed client expectations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-gray-800" id="services">
+        <div class="text-center mb-16 relative">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Our <span class="text-blue-500">Professional Services</span>
+            </h2>
+
+            <!-- Decorative Lines and Dots -->
+            <div class="relative flex items-center justify-center">
+                <!-- Left dot -->
+                <div
+                    class="w-3 h-3 bg-blue-500 rounded-full absolute left-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                </div>
+
+                <!-- Center line -->
+                <div class="w-60 h-1 bg-blue-500 mx-auto mb-6"></div>
+
+                <!-- Right dot -->
+                <div
+                    class="w-3 h-3 bg-blue-500 rounded-full absolute right-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-gray-300 max-w-2xl mx-auto mt-4">
+                We provide advanced IT solutions and expert home maintenance services ensuring your systems run
+                smoothly and your spaces stay in top condition.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+            <!-- Servers & Storage -->
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/printer.webp" alt="Servers" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Printer's Services</h3>
+                    <p class="text-sm opacity-80">High-performance printers and scanners solutions for
+                        mission-critical applications</p>
+                </div>
+            </div>
+
+            <!-- Networking Equipment -->
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/tele2.avif" alt="Networking" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">TeleCommunication </h3>
+                    <p class="text-sm opacity-80">Advanced switches, routers, and wireless solutions for seamless
+                        connectivity</p>
+                </div>
+            </div>
+
+            <!-- Workstations -->
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20workstation%20computer%20with%20multiple%20monitors%2C%20high-performance%20desktop%20setup%2C%20modern%20office%20environment%2C%20clean%20design%2C%20professional%20workspace%2C%20white%20background%2C%20business%20technology&width=200&height=200&seq=workstation001&orientation=squarish"
+                            alt="Workstations" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Security Camera's </h3>
+                    <p class="text-sm opacity-80">Powerful workstations for demanding professional and creative
+                        applications</p>
+                </div>
+            </div>
+
+            <!-- Components -->
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Computer%20hardware%20components%20including%20RAM%20memory%20modules%2C%20processors%2C%20and%20circuit%20boards%2C%20professional%20technology%20parts%2C%20clean%20white%20background%2C%20high-tech%20electronic%20components%2C%20professional%20product%20photography&width=200&height=200&seq=components001&orientation=squarish"
+                            alt="Components" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Air Conditioning</h3>
+                    <p class="text-sm opacity-80">Premium hardware components and accessories for custom
+                        configurations</p>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/camera.webp" alt="Components" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Networking Management & Installation</h3>
+                    <p class="text-sm opacity-80">This services designed to ensure secure, reliable, and
+                        high-performance connectivity for your business infrastructure.</p>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/ac2.avif" alt="Components" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">System & Laptop Repair</h3>
+                    <p class="text-sm opacity-80">Professional system and laptop repair services ensuring fast
+                        diagnostics, reliable fixes, and optimal performance for your devices.</p>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/gme.jfif" alt="Components" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Customized Gaming PC & Server </h3>
+                    <p class="text-sm opacity-80">Customized gaming PCs and high-performance servers built with premium
+                        components to deliver powerful performance, reliability, and scalability for your needs</p>
+                </div>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                        <img src="./img/switch.jfif"
+                            alt="Components" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Networking Switches & their Management/h3>
+                        <p class="text-sm opacity-80">High-performance networking switches with professional
+                            configuration and management to ensure secure, stable, and efficient network connectivity.
+                        </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="max-w-8xl mx-auto px-6 mt-6  lg:px-12" id="products">
+            <div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    Our <span class="text-blue-500"> IT Products</span>
+                </h2>
+
+                <!-- Decorative Lines and Dots -->
+                <div class="relative flex items-center justify-center">
+                    <!-- Left dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute left-64 md:left-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+
+                    <!-- Center line -->
+                    <div class="w-60 h-1 bg-blue-500 mx-auto mb-6"></div>
+
+                    <!-- Right dot -->
+                    <div
+                        class="w-3 h-3 bg-blue-500 rounded-full absolute right-64 md:right-80 top-1/2 transform -translate-y-1/2 big-bounce">
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">
+                    We provide advanced IT solutions and expert home maintenance services ensuring your systems run
+                    smoothly and your spaces stay in top condition.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2 ">
+                <!-- Servers & Storage -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                        <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Modern%20enterprise%20server%20rack%20with%20multiple%20servers%2C%20professional%20data%20center%20equipment%2C%20clean%20metallic%20design%2C%20blue%20LED%20indicators%2C%20high-tech%20server%20hardware%2C%20professional%20photography%2C%20white%20background&width=200&height=200&seq=server001&orientation=squarish"
+                                alt="Servers" class="w-full h-full object-cover object-top">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Servers & Storage</h3>
+                        <p class="text-sm opacity-80">High-performance servers and storage solutions for
+                            mission-critical applications</p>
+                    </div>
+                </div>
+
+                <!-- Networking Equipment -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                        <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Professional%20network%20switch%20with%20multiple%20ethernet%20ports%2C%20enterprise%20networking%20equipment%2C%20modern%20design%20with%20LED%20indicators%2C%20clean%20white%20background%2C%20high-tech%20networking%20hardware%2C%20professional%20product%20photography&width=200&height=200&seq=network001&orientation=squarish"
+                                alt="Networking" class="w-full h-full object-cover object-top">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Networking Equipment</h3>
+                        <p class="text-sm opacity-80">Advanced switches, routers, and wireless solutions for seamless
+                            connectivity</p>
+                    </div>
+                </div>
+
+                <!-- Workstations -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                        <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Professional%20workstation%20computer%20with%20multiple%20monitors%2C%20high-performance%20desktop%20setup%2C%20modern%20office%20environment%2C%20clean%20design%2C%20professional%20workspace%2C%20white%20background%2C%20business%20technology&width=200&height=200&seq=workstation001&orientation=squarish"
+                                alt="Workstations" class="w-full h-full object-cover object-top">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Workstations</h3>
+                        <p class="text-sm opacity-80">Powerful workstations for demanding professional and creative
+                            applications</p>
+                    </div>
+                </div>
+
+                <!-- Components -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-50 rounded-xl p-8 text-center transition-all duration-300 transform 
+                           hover:bg-blue-500 hover:text-white hover:-translate-y-2
+                           hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.6)]">
+                        <div class="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Computer%20hardware%20components%20including%20RAM%20memory%20modules%2C%20processors%2C%20and%20circuit%20boards%2C%20professional%20technology%20parts%2C%20clean%20white%20background%2C%20high-tech%20electronic%20components%2C%20professional%20product%20photography&width=200&height=200&seq=components001&orientation=squarish"
+                                alt="Components" class="w-full h-full object-cover object-top">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Components</h3>
+                        <p class="text-sm opacity-80">Premium hardware components and accessories for custom
+                            configurations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-20 navo" id="feedback">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
+                <p class="text-xl text-gray-200 underline">Real stories from real people</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 cursor-pointer">
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-4 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/spice.jpeg" alt="David Wilson"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Faheem</div>
+                            <div class="text-sm text-gray-600">IT Admin, YUM Restaurent</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"This platform has completely transformed how we manage our business
+                        operations. The intuitive interface and powerful features have increased our productivity by
+                        40%."</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/orient.jpg" alt="Lisa Thompson"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Awais</div>
+                            <div class="text-sm text-gray-600">Purchase Admin,ORIENT Ceramcia</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The customer support is exceptional, and the platform's reliability
+                        is unmatched. We've been using it for 2 years and couldn't be happier with the results."</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/greenuniversiy-removebg-preview.png" alt="James Miller"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Ahmad</div>
+                            <div class="text-sm text-gray-600">IT HEAD, GIU </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The automation features have saved us countless hours every week.
+                        It's like having an extra team member that never sleeps. Highly recommended!"</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/alifatima.jpg" alt="James Miller"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Qamar</div>
+                            <div class="text-sm text-gray-600">Purchase HOD, GIU </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The team at PowerTechFusion delivered outstanding IT solutions for
+                        our business. Their professionalism, quick response time, and technical expertise made the
+                        entire process smooth and efficient. We truly appreciate their reliable support."</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/rafi group.png" alt="James Miller"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Zia</div>
+                            <div class="text-sm text-gray-600">Purchase & IT HOD, Rafi Group </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"PowerTechFusion has been a game-changer for our company’s
+                        networking and security setup. Their solutions are reliable, modern, and tailored to our needs.
+                        The support team is always ready to help whenever we need assistance."</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="flex items-center mb-6">
+                        <img src="./img/Din-removebg-preview.png" alt="James Miller"
+                            class="w-12 h-12 rounded-full object-cover object-top">
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Mr. Raheel</div>
+                            <div class="text-sm text-gray-600">IT Admin, DIn Industries </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Working with PowerTechFusion was a great experience. From CCTV
+                        installation to IT hardware support, everything was handled with precision and professionalism.
+                        Their dedication to quality service really sets them apart.!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-gray-900" id="review">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    Why Choose<span class="text-blue-500">PowerTechFusion</span>
+                </h2>
+
+                <!-- Decorative Lines and Dots -->
+                <div class="relative flex items-center justify-center">
+
+                    <!-- Center line -->
+                    <div class="w-60 h-1 bg-blue-500 mx-auto mb-6"></div>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-300 max-w-2xl mx-auto ">
+                    We deliver advanced IT solutions and specialized maintenance services, ensuring seamless system
+                    performance and optimal operational efficiency.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer">
+
+                <!-- Card 1 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-shield-check-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Enterprise Grade Quality</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        All our hardware solutions meet the highest industry standards for reliability, performance, and
+                        security in enterprise environments.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-customer-service-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Expert Technical Support</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our certified engineers provide round-the-clock support to ensure your systems operate at peak
+                        performance.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-rocket-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Rapid Deployment</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Fast installation and configuration services to minimize downtime and accelerate your digital
+                        transformation.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-line-chart-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Future-proof infrastructure that grows with your business needs, from startups to large
+                        enterprises.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-money-dollar-circle-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Cost Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Competitive pricing and flexible financing options to maximize your IT investment and reduce
+                        total cost of ownership.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group bg-white p-8 rounded-xl shadow-sm transition-all duration-300 
+                       hover:-translate-y-2 hover:bg-gray-200 hover:shadow-[0_10px_20px_0_rgba(59,130,246,0.5)]">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 
+                           transition-all duration-300 group-hover:bg-blue-500">
+                        <i class="ri-global-line text-primary text-2xl transition-all duration-300 
+                               group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Worldwide presence with local support teams to serve your business wherever you operate.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-[#1A1A1A] pt-16 pb-8" id="contact">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-7 mb-12">
+                <div>
+                    <div class=" w-60 flex justify-between">
+                        <img class="h-12 w-12" src="./img/logo.png" alt="">
+                        <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">PowerTechFusion</a>
+                    </div>
+                    <p class="text-gray-400 mb-6">We delivers innovative and reliable IT solutions tailored to your
+                        needs with high-performance results.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61577619736315" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="https://x.com/PowerTechFusion" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-twitter-x-line text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/powertech-fusion-6b0526316/" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-blue-500 transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white ">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li class="point">
+                            <a class=" group text-md relative text-gray-400 hover:text-blue-500 transition-colors"
+                                href="./Learn.html">
+                                Security Camera
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+
+
+                        <li class="point">
+                            <a class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                Electricsl Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                TeleCommunication
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                Printer's
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                IT Hardware Accessories
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li class="point">
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                Air Conditioning
+                                Services
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#about"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">
+                                About Us
+                                <span class="underline-animate"></span>
+                            </a>
+                        </li>
+                        <li><a href="#projects"
+                                class="group text-md relative text-gray-400 hover:text-blue-400 transition-colors">Our
+                                Projects <span class="underline-animate"></span></a>
+                        </li>
+                        <li><a href="#testimonial"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">Testimonials
+                                <span class="underline-animate"></span></a>
+                        </li>
+                        <li><a href="#faq"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">FAQs
+                                <span class="underline-animate"></span></a></li>
+                        <li><a href="#contact"
+                                class="group text-md relative text-gray-400 hover:text-blue-500 transition-colors">Contact
+                                Us <span class="underline-animate"></span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer rounded-full mr-3">
+                                <i class="ri-map-pin-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">Office#3, Floor#2,ICON Center Beside Panorama,<br /> Mall Road,
+                                Lahore</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer rounded-full mr-3">
+                                <i class="ri-phone-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">+923236379199 <br />+923258061035</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group bg-[#2A2A2A] hover:bg-blue-500 cursor-pointer  rounded-full mr-3">
+                                <i class="ri-mail-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">info.powertechfusion <br />@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center group hover:bg-blue-500 cursor-pointer bg-[#2A2A2A] rounded-full mr-3">
+                                <i class="ri-time-line text-blue-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-gray-400">Mon-Fri: 10am-5pm<br>Sat: 11am-3pm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" ml-3 sm-ml-0">
+                    <h4 class="text-xl font-bold mb-6 text-white">Company Profile</h4>
+
+                    <a href="./Power Tech profile.pdf (2).pdf" target="_self"
+                        class="flex items-center text-gray-400 hover:text-blue-500 transition-colors group">
+
+                        <div
+                            class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3 group-hover:bg-blue-500">
+                            <i class="ri-file-pdf-line text-blue-500 group-hover:text-white"></i>
+                        </div>
+
+                        <span>View Company Profile</span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 mb-4 md:mb-0">© 2025 HomeFixPro. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- whatsapp icon -->
+    <a href="https://wa.me/+923236379199" class="fixed h-[80px] w-[80px] right-4 bottom-10 z-50" id="whatsapp-btn">
+        <img src="./img/whatsapp.png" alt="whatsapp" />
+    </a>
+    <!-- Tooltip -->
+    <div id="whatsapp-tooltip"
+        class="fixed right-[90px] bottom-[110px] z-20 bg-blue-600 text-white p-2 rounded shadow-lg hidden">
+        Contact us on WhatsApp
+    </div>
+    <script id="newsletter-subscription">
+        document.addEventListener('DOMContentLoaded', function () {
+            const subscribeButton = document.querySelector('section.bg-primary button');
+            const emailInput = document.querySelector('section.bg-primary input[type="email"]');
+
+            subscribeButton.addEventListener('click', function () {
+                const email = emailInput.value.trim();
+                if (email && email.includes('@')) {
+                    alert('Thank you for subscribing! We\'ll keep you updated.');
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+
+            emailInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    subscribeButton.click();
+                }
+            });
+        });
+
+        // scroll behaviour 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+
+        // question  toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            content.classList.toggle('hidden');
+
+            // Toggle plus/minus icon
+            if (icon.classList.contains('ri-add-line')) {
+                icon.classList.remove('ri-add-line');
+                icon.classList.add('ri-subtract-line');
+            } else {
+                icon.classList.remove('ri-subtract-line');
+                icon.classList.add('ri-add-line');
+            }
+        }
+
+        // whatsapp
+        const btn = document.getElementById("whatsapp-btn");
+        const tooltip = document.getElementById("whatsapp-tooltip");
+
+        btn.addEventListener("mouseenter", () => {
+            tooltip.classList.remove("hidden");
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            tooltip.classList.add("hidden");
+        });
+
+
+
+        // navbar
+        const menuButton = document.getElementById("menuButton");
+        const menuIcon = document.getElementById("menuIcon");
+        const closeIcon = document.getElementById("closeIcon");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = !menuIcon.classList.contains("hidden");
+
+            if (isOpen) {
+                // Open menu
+                mobileMenu.classList.remove("translate-x-full");
+                mobileMenu.classList.add("translate-x-0");
+
+                menuIcon.classList.add("hidden");
+                closeIcon.classList.remove("hidden");
+            } else {
+                // Close menu
+                mobileMenu.classList.remove("translate-x-0");
+                mobileMenu.classList.add("translate-x-full");
+
+                menuIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
